@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Rock+Salt&display=swap');
+
+/* Seletor UNIVERSAL - Alterando o Box Model para TODAS as tags do HTML */
+* {
+    box-sizing: border-box;
+}
+
+/* Regras CSS para o Site de Exemplo
+O que você fizer aqui irá formatar TODAS as páginas
+HTML conectadas com este arquivo. */
+
+body {
+    background-image: url(../imagens/tarde.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Seletor ID/IDENTIFICADO */
+#container {
+    background-color: rgba(255, 255, 255, 0.651);
+    width: 80%;
+    margin: auto;
+    /* definindo LARGURA e MARGEM AUTOMÁTICA, o resultado é a centralização da caixa */
+
+    /* Limitando a largura máxima */
+    max-width: 1200px;
+
+    /* Limitando a largura mínima */
+    min-width: 600px;
+
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: rgb(243, 111, 4) 2px 3px 3px;
+}
+
+/* Tornando as IMAGENS flexíveis/responsivas */
+img {
+    max-width: 100%;
+    border: solid 1px rgb(255, 255, 255);
+    box-shadow: red 0 0 1px;
+}
+
+
+
+h1 {
+    /* Em caso de GRADIENTE diagonal, usa-se um valor numérico e a medida em graus (deg) */
+
+    background: linear-gradient(135deg, #ea5507 5%, #feccb1 18%, #feccb1 18%, #ea5507 30%, #ea5507 40%, #ea5507 40%, #f17432 50%, #feccb1 86%, #fb955e 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    font-family: 'Rock Salt', cursive;
+    text-shadow: rgb(255, 115, 0) 5px 5px 10px;
+    font-size: 40px;
+    padding: 30px;
+    border-radius: 5px 40px;
+    text-align: center;
+
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../imagens/oriental-tiles.png);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-left-width: 20px;
+    border-left-color: #ea5507;
+    border-left-style: solid;
+
+    /* Esta forma com as três linhas é a mais detalhada, especificando cada etapa desta formatação. 
+      Há também uma forma de simplificar esta etapa em apenas UMA LINHA. Sendo: "border-left: 20px yellow solid" */
+
+    border-left: 20 px yellow solid;
+}
+
+/* Seletor "CLASSE"  sempre */
+.centralizar {
+    text-align: center;
+}
+
+.sombra-texto {
+    text-shadow: orangered 2px 3px 3px;
+}
+
+.borda-arredondada {
+    border-radius: 8px;
+}
+
+.destaque {
+    background-color: rgba(255, 255, 0, 0.74);
+    padding: 1px;
+    border: rgb(255, 145, 0) solid 2px;
+}
+
+/* Regras para o menu e seus links */
+
+nav {
+    text-align: center;
+}
+
+/* Seletor DESCENDENTE */
+
+nav a {
+    color: rgb(255, 254, 254);
+    background-color: rgb(190, 76, 0);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    width: 30%;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px 30px;
+
+    /* Altera o Box Model CSS (comportamento) */
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+/* Regra de ACIONAMENTO DE LINK (pseudo classe para alterar a cor do link quando passar o mouse em cima) */
+
+nav a:hover,
+nav a:focus {
+    background-color: rgb(255, 94, 0);
+    box-shadow: rgb(255, 255, 255) 2px 2px 10px;
+    transform: translateY(-9px);
+
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Ao invés de usar BLOCOS, é possível aplicar esta estibilização apenas no CSS através deste comando 
+   Se for INLINE, tem que adicionar na mão em todas as partes das páginas.*/
+figure {
+    /* "margin:0" ==>CSS reset */
+    text-align: center;
+
+
+    /* Tornando o elemento REFERÊNCIA para o posicionamento */
+    position: relative;
+    max-width: 419px;
+    margin: auto;
+
+}
+
+figcaption {
+    /* "Devolver" a área do elemento */
+    width: 100%;
+    font-weight: bold;
+    background-color: rgba(255, 81, 0, 0.74);
+
+    /* Tornando o elemento livre para posicionamento  */
+    position: absolute;
+
+    /* Coordenadas */
+    right: 0;
+    bottom: 95px;
+    border-radius: 15px;
+    padding: 6px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+
+/* seletor DESCENDENTE? */
+figure {
+    filter: grayscale(100%) blur(2px);
+    transition: 0.8s;
+    cursor: pointer;
+    /* CURSOR altera o ícone do mouse ao passá-lo pela imagem */
+}
+
+figure:hover {
+    filter: none;
+    transform: scale(1.1)
+        /* rotate(1deg) => vai fazer a imagem girar */
+}
+
+
+/* Seletor DESCENDENTE
+   selecionar: TODAS AS IMAGENS */
+.centralizar img {
+    clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+    /* Pegamos o modelo de um site. Ficou com uma forma horrível. Para remover é só excluir esta linha */
+}
+
+ul {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+ul li {
+    color: darkviolet
+}
+
+ul li:first-child {
+    color: orangered
+}
+/* Formatando apenas o primeiro "li" descendente da ul */
+
+ul li:last-child { color: greenyellow; text-shadow: black 5px 5px 15px; }
+/* Formatando apenas o primeiro "li" descendente da ul */
+
+ul li:nth-child(2) { color: black; }
+/* Ele seleciona o item especifício para ser aplicado a estilização */
+
+ul li:nth-child(odd) { background-color: rgb(253, 173, 69);}
+ul li:nth-child(even) { background-color: rgba(0, 183, 255, 0.548);}
+
+
+/* FLUTUAR => usamos para manter uma imagem "flutuando" ao redor de um texto, margeado para à esquerda ou à direita*/
+.flutuar {
+    float: left;
+    margin-right: 10px;
+}
+
+/* Etapa 1: REGRA DE ANIMAÇÃO */
+
+@keyframes animaCores {
+    from { 
+        background-color: #0617ff;
+        color: rgb(255, 255, 255);        
+        }
+    /* "de" (como inicia) */
+    to { 
+        background-color: rgb(255, 115, 0);
+        color: rgb(0, 0, 0);
+        }
+    /* "para" (como finaliza) */
+}
+
+/* Etapa 2: aplicar a animação em algum(ns) elemento(s)*/
+
+.subtitulo {
+    animation-name: animaCores;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    /* A quantidade que deseja que a aplicação repita na página */
+    animation-duration: alternate;
+}
+
+#banner {
+    width: 450px;
+    margin: auto;
+    border: solid 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes animaBanner {
+    from { transform: translateX(-120px) rotate(0) ; }
+
+    to { transform: 
+        translateX(440px)
+        rotate(360deg)
+        scale(0.1);
+       }
+}
+
+#banner img {
+    border: solid 1px red;
+    animation-name: animaBanner;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    /* Animation Timing Function é usado para especificar a duração do movimentação da imagem no eixo do box */
+    animation-direction: alternate-reverse;
+
+}
+
+#banner p {
+    will-change: transform;
+
+    margin: 0; padding: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0.452);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    position: absolute;
+    /* top: 30px; */
+    bottom: 30px;
+    right: 0;
+    left: 0;
+    font-weight: bold;
+    /* width: 100%; */
+
+    animation-name: animaLegenda;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out ;
+}
+
+@keyframes animaLegenda {
+    from { filter: grayscale(100%); transform: scale(1.7); }
+    to { filter: none; transform: scale(3.2s); }
+
+}
